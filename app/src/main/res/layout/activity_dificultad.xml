@@ -30,8 +30,6 @@
         android:textSize="20dp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/totalRes"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/dificultad" />
 
@@ -58,8 +56,6 @@
         android:textSize="20dp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/pares" />
 
@@ -84,7 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.02" />
+        app:layout_constraintGuide_percent="0.01" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -92,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.19" />
+        app:layout_constraintGuide_percent="0.14" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -106,23 +102,347 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.92" />
+        app:layout_constraintGuide_percent="0.96" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.76" />
 
-    <androidx.gridlayout.widget.GridLayout
-        android:layout_width="373dp"
-        android:layout_height="562dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline7">
+    <ImageView
+        android:id="@+id/p61"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/p51"
+        app:layout_constraintEnd_toStartOf="@id/p62"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
 
-    </androidx.gridlayout.widget.GridLayout>
 
+    <ImageView
+        android:id="@+id/p62"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p61"
+        app:layout_constraintTop_toBottomOf="@+id/p52"
+        app:layout_constraintEnd_toStartOf="@id/p63"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p63"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p62"
+        app:layout_constraintTop_toBottomOf="@+id/p53"
+        app:layout_constraintEnd_toStartOf="@id/p64"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p64"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p63"
+        app:layout_constraintTop_toBottomOf="@+id/p54"
+        app:layout_constraintEnd_toStartOf="@id/p65"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p65"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/p64"
+        app:layout_constraintTop_toBottomOf="@+id/p55"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/p51"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/p41"
+        app:layout_constraintEnd_toStartOf="@id/p52"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/p52"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p51"
+        app:layout_constraintTop_toBottomOf="@+id/p42"
+        app:layout_constraintEnd_toStartOf="@id/p53"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p53"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p52"
+        app:layout_constraintTop_toBottomOf="@+id/p43"
+        app:layout_constraintEnd_toStartOf="@id/p54"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p54"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p53"
+        app:layout_constraintTop_toBottomOf="@+id/p44"
+        app:layout_constraintEnd_toStartOf="@id/p55"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p55"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/p54"
+        app:layout_constraintTop_toBottomOf="@+id/p45"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/p41"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/p31"
+        app:layout_constraintEnd_toStartOf="@id/p42"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/p42"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p41"
+        app:layout_constraintTop_toBottomOf="@+id/p32"
+        app:layout_constraintEnd_toStartOf="@id/p43"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p43"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p42"
+        app:layout_constraintTop_toBottomOf="@+id/p33"
+        app:layout_constraintEnd_toStartOf="@id/p44"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p44"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p43"
+        app:layout_constraintTop_toBottomOf="@+id/p34"
+        app:layout_constraintEnd_toStartOf="@id/p45"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p45"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/p44"
+        app:layout_constraintTop_toBottomOf="@+id/p35"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p31"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/p21"
+        app:layout_constraintEnd_toStartOf="@id/p32"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/p32"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p31"
+        app:layout_constraintTop_toBottomOf="@+id/p22"
+        app:layout_constraintEnd_toStartOf="@id/p33"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p33"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p32"
+        app:layout_constraintTop_toBottomOf="@+id/p23"
+        app:layout_constraintEnd_toStartOf="@id/p34"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p34"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p33"
+        app:layout_constraintTop_toBottomOf="@+id/p24"
+        app:layout_constraintEnd_toStartOf="@id/p35"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p35"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/p34"
+        app:layout_constraintTop_toBottomOf="@+id/p25"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/p21"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/p11"
+        app:layout_constraintEnd_toStartOf="@id/p22"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/p22"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p21"
+        app:layout_constraintTop_toBottomOf="@+id/p12"
+        app:layout_constraintEnd_toStartOf="@id/p23"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p23"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p22"
+        app:layout_constraintTop_toBottomOf="@+id/p13"
+        app:layout_constraintEnd_toStartOf="@id/p24"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p24"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p23"
+        app:layout_constraintTop_toBottomOf="@+id/p14"
+        app:layout_constraintEnd_toStartOf="@id/p25"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p25"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/p24"
+        app:layout_constraintTop_toBottomOf="@+id/p15"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <ImageView
+        android:id="@+id/p11"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@id/p12"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/p12"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p11"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@id/p13"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p13"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p12"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@id/p14"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p14"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/p13"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@id/p15"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/p15"
+        android:layout_width="68dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/p14"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:srcCompat="@drawable/noimagen"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
