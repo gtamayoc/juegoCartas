@@ -7,6 +7,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class Dificultad extends AppCompatActivity {
@@ -54,20 +57,29 @@ public class Dificultad extends AppCompatActivity {
             p63.setVisibility(View.GONE);
             p64.setVisibility(View.GONE);
 
-            int[] resourceArray = llenarArray(pares_restantes2);
+            int[] resourceArray = llenarArrays(pares_restantes1);
+            int[] resourceArray2 = new int[pares_restantes1];
+            List<int[]> lista = Arrays.asList(resourceArray);
+            Collections.shuffle(lista);
+            System.out.println(lista);
+            lista.toArray(resourceArray2);
 
             for (int i = 0; i < pares_restantes2; i++) {
 
-                if (pares_restantes1 >= i) {
+                if (pares_restantes1 >i) {
                     ImageView prueba2 = prueba3[i];
                     prueba2.setImageResource(resourceArray[i]);
                 } else {
                     ImageView prueba2 = prueba3[i];
-                    prueba2.setImageResource(resourceArray[i]);
+                    prueba2.setImageResource(resourceArray2[i-pares_restantes1]);
                 }
 
             }
         } else if (dificultad.equals("Medio")) {
+
+
+
+
             ImageView[] prueba3 = {p11, p12, p13, p14, p21, p22, p23, p24, p31, p32, p33, p34, p41, p42, p43, p44, p51, p52, p53, p54, p61, p62, p63, p64};
             pares_restantes1 = 12;
             int pares_restantes2 = pares_restantes1 + pares_restantes1;
@@ -81,8 +93,16 @@ public class Dificultad extends AppCompatActivity {
                 int resource = imagenesID[rgenerador.nextInt(imagenesID.length)];
                 ImageView prueba2 = prueba3[i];
                 prueba2.setImageResource(resource);
+                for (int j = 0; j < pares_restantes2-1; j++) {
+                    int resources = imagenesID[rgenerador.nextInt(imagenesID.length)];
+                }
+
             }
         } else {
+
+
+
+
             pares_restantes1 = 15;
             int pares_restantes2 = pares_restantes1 + pares_restantes1;
             for (int i = 0; i < pares_restantes2; i++) {
@@ -101,37 +121,24 @@ public class Dificultad extends AppCompatActivity {
 
     }
 
-    private int[] llenarArray(int pares_restantes1) {
-        int tempPare = (pares_restantes1 / 2);
-        int[] resourceArray = new int[tempPare];
-        int[] resourceArray2 = new int[tempPare];
-        Random rd = new Random();
+    private int[] llenarArrays(int pares_restantes1) {
+        int[] resourceArray = new int[pares_restantes1];
         for (int i = 0; i < pares_restantes1; i++) {
-            if (tempPare > i) {
-                int resource = imagenesID[rgenerador.nextInt(imagenesID.length)];
-                if (i == 0) {
-                    resourceArray[i] = resource;
-                } else {
-                    while (verificar(resourceArray, resource) != true) {
-                        resourceArray[i] = resource;
-                    }
-                }
-
-            } else {
-                if (i == 9) {
-                    resourceArray2[9 - (i+1)] = resourceArray[i];
-                } else {
-                    int j = rd.nextInt(tempPare + 1);
-                    int temp = resourceArray[i-tempPare];
-                    resourceArray2[(i+1) - 9] = resourceArray[j];
-                    resourceArray2[j - 1] = temp;
-                }
+            int resource = imagenesID[rgenerador.nextInt(imagenesID.length)];
+            if(i==0){
+                resourceArray [0]=  resource;
+            }
+            while(verificar(resourceArray,resource)!=true)
+            {
+                resourceArray [i]=  resource;
             }
 
         }
 
+
         return resourceArray;
     }
+
 
     private boolean verificar(int[] resourceArray, int resource) {
         if (resourceArray == null) {
